@@ -1,0 +1,71 @@
+
+\section{一级标题三号宋体加粗居中}   
+\subsection{二级标题四号黑体加粗居左}
+\subsubsection{三级标题小四号宋体加粗居左}
+\par  正文部分用小四号字。……
+
+%---------------------------------
+\newpage
+\section{网站导航概述}
+\subsection{网站导航技术的概念（二级标题四号黑体加粗居左，前后0.5行）}
+\par 据参考文献 \citep{Naidu1989Evaluation}（参考文献标注式样之一），所谓网站导航就是针对站点的信息结构，提供组织和导航系统的菜单机制，帮助用户查找信息，从而优化用户体验。网站导航学科要涉及到：传统结构学、管理科学、UI设计学、实用科学等。（正文首行缩进两个汉字符，宋体小四号字，1.5倍行距。）
+
+\subsection{如何设计Web站点的导航}
+\par 当开始讨论“网站导航UI设计”，大多会立即与动态脚本，图形，视觉效果设计等等联想起来。这些的确是UI设计中不可忽视的元素。然而一个网站的核心设计所面临的最大挑战是围绕着“信息管理功能”的，并非仅仅是外观视觉。\\
+
+\subsubsection{Web站点导航的分类（三级标题小四号宋体加粗居左，前后0.5行）}
+\par Web站点用户导航都包括哪些？在站点中一个多样化的用户导航设计将使得站点的易用性尽可能地提高。根据Web站点导航的目的，可以将导航分为以下几种：\upcitep{Rohden2012Turbine}（参考文献标注式样之二）
+\paragraph{核心导航（Core Navigation）（四级标题首行缩进两个字符，宋体小四号字。）} 
+\par 核心导航是Web站点主体信息的体现。它将一个Web站点所提供的信息进行了最基本的归类，并以导航条的形式页面的正上方，这样可以清楚地被访问者发现。核心导航应该被一个网站里的每个页面所包含。
+\subparagraph{命名一个片段（五级标题首行缩进两个字符，宋体小四号字。）}
+\par 首先必须确定并命名文文档中的一段需要链接到的文字，使用锚点(anchor)<a>标记，并设定属性NAME的值。如
+<a name="part1">链接到：第一章 网站导航设计概述</a>(程序段五号宋体居左，1倍行距)
+有以下几种方法使一个Web文档中的元素应用CSS。但这种情况也应该尽量避免，最好还是把HTML和CSS用单独的档存放\footnote{在外链的CSS中没有<style>标签。}。(随文脚注式样)
+\paragraph{地区导航（Geographic Navigation）}
+\par 当网站划分为多个地区（可以是国家，也可以是一个国家内不同区域）性的子站点\citep{宫琳2017基于专利信息的产品方案竞争力评价方法} ,需要地区导航。
+
+%---------------------------------
+\newpage
+\begin {figure}[htbp]
+\centering
+\includegraphics {figures/figure-example.jpg}
+\caption{\songti \zihao{5}地区导航(图题放在图下，按章顺序编号。五号宋体居中。)}
+\label{fig:figure-example}
+\end{figure}
+
+\subsubsection{网站导航的表现形式}
+\par 网站导航根据不同Web站点的需要可以布置为多种表现形式，其中常见的表现形式如表\ref{tab:1}所示。
+\begin{table}[htbp]
+\centering
+\caption{\heiti \zihao{5}网站导航的表现形式}
+\label{tab:1}
+\begin{tabular}{llll}
+	\toprule
+	类型  &名称  &  英文名  & 特点  \\
+	\midrule
+	1  &    面包屑  &  breadcrumb trail & 简单 \\
+	2  &  下拉导航菜单  & Drop-Down Navigation Menus  & 常用 \\
+	3  &   弹出式导航菜单  &  Pop-Up Navigation Menus &  容量大 \\
+	4  &  树形导航  &  Tree-View Navigation & 可操控复杂流程 \\
+	\bottomrule
+\end{tabular}
+\end{table}
+	
+\par 对x,$\theta$求二阶混合偏导数得： \\
+\begin{equation}
+\centering
+ \frac{\partial u(x,\nu(x),\theta)}{\partial x} = (1-\omega)\bar \nu^{'}(x)-\frac{\omega L_1}{\theta}
+\end{equation}
+%---------------------------------------------
+\newpage
+
+\section{程序代码}
+\begin{lstlisting}[language=C++,escapeinside=``]
+#include<iostream>
+using namespace std;
+int main
+{
+	cout<<"Hello world!"<<endl;//`输出`
+	return 0;
+}
+\end{lstlisting}

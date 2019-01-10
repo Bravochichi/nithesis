@@ -1,0 +1,228 @@
+%----------------南昌工程学院毕业论文LaTeX模板------------------------
+%----------------AUTHOR  :  GUANGCHUN-------------------------
+
+\documentclass[UTF8,twoside,AutoFakeBold]{ctexart} % use larger type; default would be 10pt
+\usepackage{graphicx}
+
+\usepackage {setspace}%设置正文行间距为1.5倍
+
+\usepackage[a4paper,top=25mm, bottom=20mm, left=25mm, right=20mm]{geometry}%设置页边距
+\usepackage{graphicx}%插入图片
+\usepackage{booktabs} %美观的表格
+\usepackage{amsmath}%数学模式
+\usepackage{fancyhdr} %页面布局
+%\usepackage{appendix}%附录部分,有的话去掉前面的百分号
+\usepackage{titletoc}  %与标题目录有关
+
+\usepackage[square]{natbib}%文献系统
+\setmainfont{Times New Roman}
+
+%--------------------------------
+%目录样式
+%目录页设置
+\renewcommand{\contentsname}{\zihao{2}\songti 目\quad 录}
+\titlecontents{section}[0em]{\heiti\zihao{4} }{\thecontentslabel\ }{}
+{\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
+\titlecontents{subsection}[2em]{\vspace{0.1\baselineskip}\zihao{-4}}{\thecontentslabel\ }{}
+{\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
+\titlecontents{subsubsection}[4em]{\vspace{0.1\baselineskip}\zihao{-4}}{\thecontentslabel\ }{}
+{\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
+
+%--------------------------
+%三级标题格式
+
+\ctexset {
+	section = {
+name = {第,章},
+number = \chinese{section},
+nameformat = \songti \bfseries\zihao{3},
+titleformat = \centering\songti \bfseries\zihao{3},
+}
+}
+
+\ctexset{
+	subsection = {
+format = \heiti\bfseries\zihao{4},
+}
+}
+
+\ctexset{
+	subsubsection = {
+format = \raggedright ,
+nameformat = \bfseries\zihao{-4},
+titleformat =\songti \bfseries\zihao{-4},
+}
+}
+\setcounter{secnumdepth}{5}
+\ctexset{
+	paragraph = {	
+	name = {,.},
+        number=\arabic{paragraph}, 
+        format=\indent{}\songti\zihao{-4}
+        }
+}
+\ctexset{
+	subparagraph = {
+	name = {(,)},
+	number = \arabic{subparagraph},
+	 format=\songti\zihao{-4}
+}
+}
+
+%---------------标注样式-----------
+	
+\newcommand{\upcitep}[1]{\textsuperscript{\textsuperscript{\citep{#1}}}}  
+\setcitestyle{numbers}
+%---------------------------
+%代码设置
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{
+	numbers=left,  
+	frame=tb,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	framerule=1pt,
+	rulecolor=\color{gray!35},
+	backgroundcolor=\color{gray!5},
+	basicstyle={\ttfamily},
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+}
+%----------------------------------------------
+\begin{document}
+%---------------------------------
+
+
+%-------------------------------
+	\begin{titlepage}
+	
+		\vspace*{0.5cm}
+		\centering		
+		{\heiti\zihao{-1} 南昌工程学院本(专)毕业设计}
+		
+		\centering
+	{ \songti\zihao{4}
+		\vspace*{1.5cm}
+		\quad\includegraphics[width=5.5cm,height=5.5cm]{figures/nit-logo.jpg}\\{}
+		
+		 \vskip 2cm
+	%	 \baselineskip 
+		 \makebox[50mm]{~~系~ （院）}
+		 \underline{\makebox[75mm][c]{ 这里填写}}\\%院系
+		 \vskip 0.9cm
+		 \makebox[50mm]{专\qquad 业}
+		 \underline{\makebox[75mm][c]{ 这里填写}}\\%专业
+		 \vskip 0.9cm
+		 \makebox[50mm]{毕业设计(论文)题目}
+		 \underline{\makebox[75mm][c]{ 这里填写}}\\%题目
+		 \vskip 0.9cm
+		 \makebox[50mm]{学生姓名}
+		 \underline{\makebox[75mm][c]{ 这里填写}}\\%姓名
+		 \vskip 0.9cm
+		 \makebox[50mm]{班\qquad  级}
+		 \underline{\makebox[75mm][c]{ 这里填写}}\\%班级
+		 \vskip 0.9cm
+		 \makebox[50mm]{学\qquad 号}
+		 \underline{\makebox[75mm][c]{ \LARGE 2016214000}}\\%学号
+		 \vskip 0.9cm
+		 \makebox[50mm]{指导老师}
+		 \underline{\makebox[75mm][c]{ 这里填写}}\\%老师
+		 \vskip 0.9cm
+		  \makebox[50mm]{完成日期}
+		 \underline{\makebox[75mm][c]{ 这里填写}}\\%日期
+		 \vskip 1cm
+		 \LARGE \heiti{\number \year }~年~\heiti{\number\month}~月~\heiti{\number\day}~日	
+	}	 
+	\end{titlepage}
+%--------------------------------------------------------
+%论文题目
+\newpage\thispagestyle{empty}	
+		\rightline{\quad\includegraphics[width=5cm,height=1cm]{figures/nit-title.jpg}}
+	\vskip 2cm
+	\centering
+
+         {\songti  \bfseries \zihao{2} 基于实体建模的数控仿真系统环境的开发  } %标题
+         \vskip 0.5cm
+        \rightline {\songti \zihao{-2} 小标题}%如果需要小标题的话,没有需要请注释
+        \vskip 2.5cm
+
+        { \bfseries \Large The development of Environment for NC Simulation system  based on the solid modelling}%英文标题
+        \vskip 13cm
+        \begin{flushleft}
+        \songti\zihao{4}
+        总计\makebox[50mm]{毕业设计(论文)}  \underline{\makebox[25mm][c]{ X}} 页\\
+       \quad \quad \makebox[50mm]{表\qquad \quad \qquad 格}  \underline{\makebox[25mm][c]{ X}} 个\\
+        \quad \quad \makebox[50mm]{插\qquad \quad\qquad 图}  \underline{\makebox[25mm][c]{ X}}幅\\
+        \end{flushleft}
+        
+
+%\endtitlepage
+%-----------------------------------------	
+
+\newpage\thispagestyle{plain}
+\pagenumbering{Roman} %页码采用罗马数字
+\renewcommand{\abstractname}{\songti \zihao{3}摘~要}
+\addcontentsline{toc}{section}{摘要}
+\include{body/cn_abs}
+
+%------------------------------------------------------
+\newpage\thispagestyle{plain}
+
+\renewcommand\abstractname{\Large Abstract}
+\addcontentsline{toc}{section}{ABSTRACT}
+\include{body/en_abs}
+
+%-------------------------------------------------
+%生成目录
+\newpage
+\tableofcontents\thispagestyle{empty}
+
+\setcounter {tocdepth}{3}
+
+\renewcommand{\thefigure}{\arabic{section}-\arabic{figure}}  %设置图片标题样式
+\renewcommand{\thetable}{\arabic{section}-\arabic{table}}  %设置表格标题样式
+\renewcommand{\theequation}{\arabic{section}-\arabic{equation}} %设置公式右边注释样式
+
+%------------------------------------------------
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[CO]{\songti \zihao{-5}南昌工程学院本（专）科毕业设计（论文） }  %奇数页页眉设置
+\fancyhead[CE]{\songti \zihao{-5}\rightmark}   %偶数页页眉设置
+
+\renewcommand\sectionmark [1]{\markboth  {}{第 \thesection 章 ： #1}}
+\cfoot{\thepage}
+
+%-------------------------------
+\newpage
+\pagenumbering{arabic}
+
+\raggedright
+\setlength {\parindent }{2 em}
+
+\onehalfspacing %正文1.5倍间距
+\songti \zihao{-4} %正文采用宋体小四号
+\include{body/main}
+
+%\begin{appendices}
+%\end{appendices}
+%----------------------------------------------
+%----------------------
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{bib-example}
+\addcontentsline{toc}{section}{参考文献} %添加到目录
+
+%\backmatter %在此命令后恢复成罗马数字页码
+\end{document}
